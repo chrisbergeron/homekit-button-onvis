@@ -3,21 +3,22 @@ button1:
   url: "http://example.com/api/foo"
   method: POST
   headers:
-    Authorization: "bf58cc5efa6aa11"
+    Authorization: "bf5deadbeef8cc5efa6aa11"
     Content-Type: "application/json"
   body: '{"source": "onvis", "action": "foo"}'
 
 button2:
   type: shell
-  command: "/usr/local/bin/my_script.sh arg1"
+  command: "/opt/homebrew/bin/my_script.sh arg1"
 
 button3:
   type: shell
   command: "say 'what is up smelly?'"
 
+# Disable Pihole
 button4:
   type: api
-  url: "http://SERVERNAME/admin/api.php?disable=300&auth=APIKEY"
+  url: "http://gpserver:7676/admin/api.php?disable=300&auth=z95x6e5c4a17d1ce58eb420a998d69dfd285e0e7c639706c715335d784e47f7dbff4cd7f6e"
   method: GET
 
 button5:
