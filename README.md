@@ -1,4 +1,4 @@
-# homekit-button-orvis
+# homekit-button-onvis
 
 A lightweight Flask-based webhook server triggered by HomeKit-compatible Onvis buttons via Homebridge. Each button event is routed to an HTTP API call or local shell script, defined in a `config.yml` file.
 
@@ -20,8 +20,8 @@ A lightweight Flask-based webhook server triggered by HomeKit-compatible Onvis b
 ### 1. Clone the repo & create virtualenv
 
 ```bash
-git clone https://github.com/YOURNAME/homekit-button-orvis.git
-cd homekit-button-orvis
+git clone https://github.com/chrisbergeron/homekit-button-onvis.git
+cd homekit-button-onvis
 python3 -m venv cb
 source cb/bin/activate
 pip install -r requirements.txt
