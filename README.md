@@ -20,7 +20,7 @@ A lightweight Flask-based webhook server triggered by HomeKit-compatible Onvis b
 ### 1. Clone the repo & create virtualenv
 
 ```bash
-git clone https://github.com/YOURNAME/homekit-button-orvis.git
+git clone https://github.com/chrisbergeron/homekit-button-orvis.git
 cd homekit-button-orvis
 python3 -m venv cb
 source cb/bin/activate
