@@ -50,9 +50,30 @@ button2:
 python onvis_webhook.py --config config.yml
 ```
 
+### Troubleshooting
+
+Test directly to the python app and port (5055):
+
+```bash
+curl -XPOST http://localhost:5055/api/onvis/button4
+{"status":"ok"}
+```
+
+This calls the [`/button4` API route](https://github.com/chrisbergeron/homekit-button-onvis/blob/25878edc99b6199031a7bc339a6ad7a4da174db7/config.yml#L20) configured in the `config.yml` file:
+
+```yaml
+# Disable Pihole
+button4:
+  type: api
+  url: "http://gpserver:7676/admin/api.php?disable=300&auth=z95x6e5c4a17d1ce58eb420a998d69dfd285e0e7c639706c715335d784e47f7dbff4cd7f6e"
+  method: GET
+```
+We can see that it accepted `GET` as a scheme instead of `POST`, which is fine for our use (just invoking it with no payload).
+
+
 ---
 
-## 🔄 Enable on Boot (macOS Launch Agent)
+## Enable on Boot (macOS Launch Agent)
 
 1. Copy or symlink the plist:
 
@@ -74,7 +95,7 @@ launchctl kickstart -k gui/$(id -u)/com.chrisbergeron.homekitbutton
 
 ---
 
-## 📡 API Endpoint
+## API Endpoint
 
 Trigger a button manually:
 
@@ -84,7 +105,7 @@ curl -X POST http://localhost:5055/api/onvis/button1
 
 ---
 
-## 🧪 Logs
+## Logs
 
 ```bash
 tail -F ~/Library/Logs/onvis_webhook.log
@@ -93,7 +114,7 @@ tail -F ~/Library/Logs/onvis_webhook.err
 
 ---
 
-## 🧰 Development Tips
+## Development Tips
 
 - Edit `config.yml` to add buttons or change behavior
 - Restart the process after config changes:
