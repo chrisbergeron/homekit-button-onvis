@@ -1,3 +1,4 @@
+# Example of calling a URL
 button1:
   type: api
   url: "http://example.com/api/foo"
@@ -7,6 +8,7 @@ button1:
     Content-Type: "application/json"
   body: '{"source": "onvis", "action": "foo"}'
 
+# Run a local shell script
 button2:
   type: shell
   command: "/opt/homebrew/bin/my_script.sh arg1"
