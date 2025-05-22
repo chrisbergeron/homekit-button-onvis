@@ -4,7 +4,7 @@ A lightweight Flask-based webhook server triggered by HomeKit-compatible Onvis b
 
 ---
 
-## 🚀 Features
+## Features
 
 - HomeKit support via Eve or Homebridge dummy switches
 - Button events POST to local Flask API
@@ -15,7 +15,9 @@ A lightweight Flask-based webhook server triggered by HomeKit-compatible Onvis b
 
 ---
 
-## 🔧 Installation
+## Installation
+
+### 0. This requires HomeBridge for macos
 
 ### 1. Clone the repo & create virtualenv
 
