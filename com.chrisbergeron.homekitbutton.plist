@@ -8,14 +8,17 @@
 
   <key>ProgramArguments</key>
   <array>
-    <string>/Volumes/RAID5/Documents/github/homekit-button-orvis/cb/bin/python3</string>
-    <string>/Volumes/RAID5/Documents/github/homekit-button-orvis/onvis_webhook.py</string>
+	<!-- PATH to the Python 3 binary in the virtualenv activated directory (ex. cb) -->
+    <string>/Volumes/RAID5/Documents/github/homekit-button-onvis/cb/bin/python3</string>
+	<!-- Update below to the local copy of this repo python script -->
+    <string>/Volumes/RAID5/Documents/github/homekit-button-onvis/onvis_webhook.py</string>
     <string>--config</string>
-    <string>/Volumes/RAID5/Documents/github/homekit-button-orvis/config.yml</string>
+	<!-- Update below to the local copy of this repo config file config.yml -->
+    <string>/Volumes/RAID5/Documents/github/homekit-button-onvis/config.yml</string>
   </array>
 
   <key>WorkingDirectory</key>
-  <string>/Volumes/RAID5/Documents/github/homekit-button-orvis</string>
+  <string>/Volumes/RAID5/Documents/github/homekit-button-onvis</string>
 
   <key>RunAtLoad</key>
   <true/>
